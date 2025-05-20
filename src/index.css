@@ -72,6 +72,8 @@ body {
     transition: 0.2s;
 
     user-select: none;
+
+    position: relative;
 }
 
 .selected,
@@ -111,6 +113,24 @@ body {
 
 .red {
     color: #e03131;
+}
+
+.sidebar li .del {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.4rem;
+  background: crimson;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 7px;
+  transition: transform 0.2s ease;
+  transform-origin: top left;
+}
+
+.sidebar li .del:hover {
+  transform: scale(1.2);
+  cursor: pointer;     /* optional: hand cursor */
 }
 
 form {
