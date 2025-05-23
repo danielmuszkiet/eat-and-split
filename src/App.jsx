@@ -75,7 +75,13 @@ function App() {
       </div>
       {!selectedFriend && !formOpen && <Placeholder friendList={friendList} />}
       {formOpen && <FormAddFriend onAddFriend={handelAddFriend} />}
-      {selectedFriend && <FormSplitBill friend={selectedFriend} onSplitBill={handleSplitBill} />}
+      {selectedFriend && (
+        <FormSplitBill
+          friend={selectedFriend}
+          onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
+        />
+      )}
     </div>
   );
 }
